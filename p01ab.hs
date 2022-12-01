@@ -26,7 +26,7 @@ topSum xs c = mx + topSum (removeOne xs mx) (c-1)
     where
         mx  = maximum xs
 
--- Omly remove ONE score per top selection
+-- Only remove ONE score per top selection
 -- It's NOT the case in my dataset BUT . . .
 -- It could be that top calory score's are equal for some elves
 removeOne :: [Int] -> Int -> [Int]
