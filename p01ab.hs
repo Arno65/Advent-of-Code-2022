@@ -10,27 +10,21 @@
 -- 
 module AoC2022d01ab where
 
+import Data.List
+
+filename :: String
 filename = "data/inputDay01_2022.txt"
 
 calories :: [String] -> [Int]
 calories []      = []
 calories ([]:xs) = calories xs
-calories xs      = [elve_calories xs] ++ calories (elves_calories xs)
+calories xs      = [elve_calories xs] ++ calories (rest_calories xs)
     where
-        elve_calories   = sum . map read . takeWhile (/="")
-        elves_calories  = tail . dropWhile (=="") 
+        elve_calories = sum . map read . takeWhile (/="")
+        rest_calories = dropWhile (/="") 
 
-topSum :: [Int] -> Int -> Int
-topSum _ 0 = 0
-topSum xs c = mx + topSum (removeOne xs mx) (c-1)
-    where
-        mx  = maximum xs
-
--- Only remove ONE score per top selection
--- It's NOT the case in my dataset BUT . . .
--- It could be that top calory score's are equal for some elves
-removeOne :: [Int] -> Int -> [Int]
-removeOne xs mx = takeWhile (/= mx) xs ++ tail (dropWhile (/= mx) xs)
+maximumN :: Int -> [Int] -> Int
+maximumN n = sum . take n . reverse . sort
 
 main :: IO ()
 main = do   putStrLn "Advent of Code 2021 - day 1 - both parts in Haskell"
@@ -39,7 +33,5 @@ main = do   putStrLn "Advent of Code 2021 - day 1 - both parts in Haskell"
             putStr   "The Elf carrying the most Calories, has a total of: "
             print $ maximum day1
             putStr   "The three Elves carrying the most Calories, have a total of: "
-            print $ topSum day1 3
+            print $ maximumN 3 day1 
             putStrLn "0K.\n"
-
-            
