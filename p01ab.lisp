@@ -1,5 +1,5 @@
 ;;;;    Advent of Code 2022 - Day 1 task A & B
-;;;;    Solutions in Lisp
+;;;;    Solutions in Lisp and Haskell
 ;;;;    Also solving in other languages like Haskell
 ;;;;    (Ter leering ende vermaeck...)
 ;;;;
@@ -72,7 +72,6 @@
     (if (< n 1 )
         0
         (+ *top* (sum-top (- n 1) (remove-from-list *top* numbers)))))
-
 
 ;;; The main program
 (progn 
