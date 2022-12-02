@@ -29,12 +29,10 @@ scorePart :: [Int] -> [String] -> Int
 scorePart pp = sum . map (getPoints (zip allDraws pp)) 
 
 main :: IO ()
-main = do   putStrLn "Advent of Code 2021 - day 2"
+main = do   putStrLn "Advent of Code 2022 - day 2  (Haskell)"
             day2 <- lines <$> readFile filename
             putStr   "The total score for strategy 1:  "
             print $ scorePart pointsPart1 day2
             putStr   "The total score for strategy 2: "
             print $ scorePart pointsPart2 day2 
             putStrLn "0K.\n"
-
-
