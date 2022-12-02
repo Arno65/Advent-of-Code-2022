@@ -9,6 +9,7 @@ Most of the time that will be Haskell.
 Spoiler alert: All the code has the end results of the tasks in the comment section at the start of the code.
 Also notice that these end results are obtained with the puzzle inputs from my Advent-of-Code-2022 account.
 
-Day 1 has solutions in Haskell.
+Day 1 has solutions in Haskell and Lisp.
 I also did the Infi quest on day 1 in Haskell.
 
+Day 2 has solutions in Haskell.
