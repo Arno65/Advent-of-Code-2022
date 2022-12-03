@@ -13,3 +13,5 @@ Day 1 has solutions in Haskell and Lisp.\
 I also did the Infi quest on day 1 in Haskell.
 
 Day 2 has solutions in Haskell.
+
+Day 3 has solutions in Haskell.
