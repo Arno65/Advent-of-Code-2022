@@ -38,7 +38,8 @@ countFullyOverlap = length . filter fullyOverlap
 -- Check if any sections of the left pair overlap with the right pair.
 -- 'Lazy' As soon as there is one overlapping section there is a hit.
 overlap :: ((Int,Int),(Int,Int)) -> Bool
-overlap ((l1,r1),(l2,r2)) = [ s | s <- [l1..r1], elem s [l2..r2]] /= []
+overlap ((l1,r1),(l2,r2)) = not (l1 > r2 || l2 > r1) 
+                            
 
 -- Filter and count the pairs with any overlapping section    
 countOverlaps :: [((Int,Int),(Int,Int))] -> Int
