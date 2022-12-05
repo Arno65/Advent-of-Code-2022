@@ -17,3 +17,5 @@ Day 2 has solutions in Haskell and Python.
 Day 3 has solutions in Haskell.
 
 Day 4 has solutions in Haskell.
+
+Day 5 has solutions in Haskell.
