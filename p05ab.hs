@@ -76,7 +76,3 @@ main = do   putStrLn "Advent of Code 2022 - day 5  (Haskell)"
             putStrLn $ workToTopCrates day5 9001
             
             putStrLn "0K.\n"
-
-            
-
-
