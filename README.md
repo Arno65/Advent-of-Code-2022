@@ -12,6 +12,6 @@ Also note that these final results are obtained with the puzzle input from my Ad
 Day 1 has solutions in Haskell and Lisp.\
 I also did the Infi quest on day 1 in Haskell.
 
-Day 2 has solutions in Haskell and Python.
+Day 2 and 6 have solutions in Haskell and Python.
 
-Day 3,4,5 and 6 have solutions in Haskell.
+Day 3,4 and 5 have solutions in Haskell.
