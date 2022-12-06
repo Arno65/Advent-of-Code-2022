@@ -12,7 +12,7 @@
 # but more that quick enough for here and now
 def unique(lst):
     lst.sort()
-    # after sort() ~ test consecutive characters
+    # after sort() ~check for consecutive characters
     for ix in range(len(lst)-1):
         if lst[ix] == lst[ix+1]:    
             return False
