@@ -1,6 +1,5 @@
 ;;;;    Advent of Code 2022 - Day 1 task A & B
-;;;;    Solutions in Lisp and Haskell
-;;;;    Also solving in other languages like Haskell
+;;;;    Solutions in Common Lisp
 ;;;;    (Ter leering ende vermaeck...)
 ;;;;
 ;;;;    The Elf carrying the most Calories,         has  a total of:  70116
