@@ -14,23 +14,20 @@ import Data.List (nub)
 filename :: String
 filename = "data/inputDay06_2022.txt"
 
-part1 =  4 :: Int
-part2 = 14 :: Int
-
-marker :: Int -> Int -> String -> Int
-marker m wl (c:ds)  | length tss == wl  = m + wl
-                    | length ds < wl    = (-1)
-                    | otherwise         = marker (m+1) wl ds
-    where tss = nub $ [c] ++ take (wl-1) ds
-
-startMessage :: Int -> String -> Int
-startMessage wl = marker 0 wl  
+-- recusuvely testing for unique elements
+messageMarker :: Int -> String -> Int
+messageMarker = marker 0 
+    where
+        marker m wl ds  | length ds < wl    = (-1)      -- if no start position is found
+                        | nub ps == ps      = m + wl    -- alle 'wl' characters are unique
+                        | otherwise         = marker (m+1) wl $ tail ds
+            where ps = take wl ds
 
 main :: IO ()
 main = do   putStrLn "Advent of Code 2022 - day 6  (Haskell)"
             day6 <- readFile filename
             putStr   "Start of message marker for part 1 is at: "
-            print $ startMessage part1 day6
+            print $ messageMarker  4 day6
             putStr   "Start of message marker for part 2 is at: "
-            print $ startMessage part2 day6
+            print $ messageMarker 14 day6
             putStrLn "0K.\n"
