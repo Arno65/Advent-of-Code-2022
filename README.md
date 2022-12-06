@@ -14,6 +14,6 @@ I also did the Infi quest on day 1 in Haskell.
 
 Day 2 has solutions in Haskell, Common Lisp and Python.
 
-Day 3,4 and 5 have solutions in Haskell.
+Day 3, 4 and 5 have solutions in Haskell.
 
 Day 6 has solutions in Haskell and Python.
