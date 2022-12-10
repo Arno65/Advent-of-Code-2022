@@ -26,7 +26,8 @@ Then I misread the instructions for part 2. Here I wasted many hours.
 In the weekend I took time to rewrite the code day 7 and managed to 
 create, fill and process the file system tree I wanted from the start.
 Both version work 0K.\
-(The alternative version can be found in directory 'SolvedWithTree'.)
+The alternative version can be found in directory
+[SolvedWithTree](https://github.com/Arno65/Advent-of-Code-2022/tree/main/SolvedWithTree)
 
 Day 8, 9 and 10 have solutions in Haskell.
 
