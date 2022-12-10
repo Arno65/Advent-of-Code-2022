@@ -18,16 +18,6 @@ import Data.Char
 import Data.List
 import Data.List.Split
 
-filename :: String
-filename = "data/inputDay07_2022.txt"
-
-cCommand = '$' :: Char  -- commands start at prompt '$'
-
--- Range part 1
-maxSize     =   100000 :: Int
--- Ranges for part 2
-diskSpace   = 70000000 :: Int
-updateSpace = 30000000 :: Int
 
 -- Types & structure -- In the future try to build a Tree stucture
 type Name       = String
@@ -36,6 +26,18 @@ type Size       = Int
 -- The second Name will contain the file name - these are not used in the code 
 data FileData   = File Name Name Size   deriving (Eq,Ord,Show)
 type FileList   = [FileData]
+
+-- Range part 1 & 2
+smallSize, diskSpace, updateSpace :: Size
+smallSize   =   100000
+diskSpace   = 70000000
+updateSpace = 30000000
+
+filename :: String
+filename = "data/inputDay07_2022.txt"
+
+cCommand = '$' :: Char  -- commands start at prompt '$'
+
 
 -- Starting code -- mainly for Part 1
 --
@@ -90,7 +92,7 @@ makeFilesList cd (x:xs)
             (_:cmd:nd:_)    = splitOn " " (x ++ " ?")
 
 -- Sub sum sizes per unique directory
-subSum :: FileList -> [Int]
+subSum :: FileList -> [Size]
 subSum []     = []
 subSum (f:fs) = [s + sum rs] ++ subSum rfs
     where
@@ -102,19 +104,19 @@ subSum (f:fs) = [s + sum rs] ++ subSum rfs
         notSameDirectory  td (File d _ s) = td /= d 
 
 -- sub sum ALL directories - needed for part 2
-allDirectorySizes :: [String] -> [Int]
+allDirectorySizes :: [String] -> [Size]
 allDirectorySizes = subSum . makeFilesList "root" 
 
 -- Select via a filter all small directories
-smallerSizedDirectories :: [Int] -> [Int]
-smallerSizedDirectories = filter (<= maxSize) 
+sumSmallerSizedDirectories :: [Size] -> Size
+sumSmallerSizedDirectories = sum . filter (<= smallSize) 
 
 
 -- Part 2
-
+-- 
 -- Calculate the space available and space needed.
 -- Find the nearest from the total directory size list. 
-findMinimalSpace :: [Int] -> Int
+findMinimalSpace :: [Size] -> Size
 findMinimalSpace sizes = head $ dropWhile (< findSpace) $ sort sizes
     where
         findSpace = updateSpace - (diskSpace - (maximum sizes))
@@ -123,10 +125,8 @@ findMinimalSpace sizes = head $ dropWhile (< findSpace) $ sort sizes
 main :: IO ()
 main = do   putStrLn "Advent of Code 2022 - day 7  (Haskell)"
             day7 <- allDirectorySizes <$> lines <$> readFile filename
-            let ssdl = smallerSizedDirectories day7
             putStr   "The sum of sizes of all small directories is: "
-            print $ sum ssdl
+            print $ sumSmallerSizedDirectories day7
             putStr   "The size of the directory to be erased is:    "
             print $ findMinimalSpace day7
             putStrLn "0K.\n"
-
