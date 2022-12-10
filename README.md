@@ -18,5 +18,5 @@ Day 3, 4 and 5 have solutions in Haskell.
 
 Day 6 has solutions in Haskell and Python.
 
-Day 7, 8 and 9 have solutions in Haskell.\
+Day 7, 8, 9 and 10 have solutions in Haskell.\
 (It took me more than a day to solve the day 7 quest. I misread the instructions for part 2.)
