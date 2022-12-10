@@ -19,15 +19,14 @@ Day 3, 4 and 5 have solutions in Haskell.
 Day 6 has solutions in Haskell and Python.
 
 Day 7 has two versions with solutions in Haskell\
-It took me more than a day to solve the task for day 7. 
-First I wanted to solve the task with builing a file system tree. That did not go well.\
-Next I created a list with all files incl. full path names. With that I solved part 1.\
-Then I misread the instructions for part 2. Here I wasted many hours.\
+It took me more than a day to solve the task for day 7.\
+First I wanted to solve the task with builing a file system tree. That did not go well.
+Next I created a list with all files incl. full path names. With that I solved part 1.
+Then I misread the instructions for part 2. Here I wasted many hours.
 In the weekend I took time to rewrite the code day 7 and managed to 
-create, fill and process the file system tree I wanted from the start.\
+create, fill and process the file system tree I wanted from the start.
 Both version work 0K.\
-(That version can be found in directory 'SolvedWithTree'.)
+(The alternative version can be found in directory 'SolvedWithTree'.)
 
+Day 8, 9 and 10 have solutions in Haskell.
 
-
-Day 8, 9 and 10 have solutions in Haskell.\
