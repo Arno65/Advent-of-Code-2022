@@ -31,3 +31,13 @@ The alternative version can be found in directory
 
 Day 8, 9 and 10 have solutions in Haskell.
 
+(I have solved Day 11 but want to clean up the code. That code will probably be posted during the holidays.)
+
+Day 12 has solutions in Haskell.\
+Part 1 is working 0K but my code only works for a 'max one step down' situation. 
+My AoC puzzle input only had one step down situations and produced to correct number of steps.
+Part 2 is just running part 1 (brute force) for all (41) start positions from the first column.
+
+
+
+
