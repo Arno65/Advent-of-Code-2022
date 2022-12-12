@@ -193,6 +193,6 @@ main = do   putStrLn "Advent of Code 2022 - day 12  (Haskell)"
             putStr "The fewest steps from Start to End is:          "
             print $ stepsToEndPoint1 day12
             putStr "The fewest steps from a lowest point to End is: "
-            print $ stepsToEndPoint2 day12        -- slow in the runAll
+            print $ stepsToEndPoint2 day12
             putStrLn "\n0K.\n"
             
