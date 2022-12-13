@@ -47,7 +47,7 @@ getInts :: String -> [Int]
 getInts []      = []
 getInts (c:cs)  
     | isNumber c    = [read (takeWhile isNumber (c:cs))] ++ nxt
-    | otherwise     = nxt 
+    | otherwise     = getInts cs 
         where 
             nxt = getInts (dropWhile isPunctuation $ dropWhile isNumber (c:cs))
 
