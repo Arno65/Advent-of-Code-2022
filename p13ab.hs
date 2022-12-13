@@ -49,7 +49,7 @@ getInts (c:cs)
     | isNumber c    = [read (takeWhile isNumber (c:cs))] ++ nxt
     | otherwise     = nxt 
         where 
-            nxt = getInts (dropWhile isPunctuation $ dropWhile isNumber cs)
+            nxt = getInts (dropWhile isPunctuation $ dropWhile isNumber (c:cs))
 
 -- Compare one (1) pair of packet data
 comparePair :: PairOfPackets -> Bool
