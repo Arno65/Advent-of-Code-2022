@@ -41,8 +41,5 @@ Part 2 is just running part 1 (brute force) for all (41) start positions from th
 Day 13 has solutions in Haskell.\
 (Both versions work 0K but I'm not happy with my 'packet compare' function.)
 
-Day 14 has solutions in Haskell.\
-With my solution part 2 is very slow and needs about 15 minutes to run.
-
-
+Day 14 has solutions in Haskell.
 
