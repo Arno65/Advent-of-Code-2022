@@ -150,7 +150,7 @@ showLines (l:ls) = do  putStrLn $ "| " ++ l ++ " |"
 
 
 main :: IO ()
-main = do   putStrLn "Advent of Code 2022 - day 14  (Haskell) time consuming"
+main = do   putStrLn "Advent of Code 2022 - day 14  (Haskell)"
             rocks <- parseRocks <$> lines <$> readFile filename
             let (units1,sands1) = dropSands Abyss rocks
             let (units2,sands2) = dropSands Floor rocks          
