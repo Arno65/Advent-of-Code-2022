@@ -120,12 +120,12 @@ dropSands caveWith rocks = (length sands, sands)
             | isDone                = newSands
             | otherwise             = dropSands' caveWith ppl depth newSands rocks 
                 where 
-                    nsl = getFreePreviousPoint source sands
+                    nsl = getFreePreviousPoints source sands
                     pp  = head nsl
                     ((ppl,newSands),isDone) = dropSandUnit caveWith nsl pp depth sands rocks
-                    getFreePreviousPoint [] _ = [sandSource]
-                    getFreePreviousPoint (pp:ppl) sands 
-                        | elem pp sands = getFreePreviousPoint ppl sands
+                    getFreePreviousPoints [] _ = [sandSource]
+                    getFreePreviousPoints (pp:ppl) sands 
+                        | elem pp sands = getFreePreviousPoints ppl sands
                         | otherwise     = (pp:ppl)
 
 -- Show the 2D map of the cave
