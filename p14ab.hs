@@ -5,8 +5,8 @@
 -- The resting number units of sand with the cave abyss is:   901
 -- The resting number units of sand with the cave floor is: 24589
 --
--- Part 1 compiled (Intel) needs about    1 second. 
--- Part 2 compiled (Intel) needs about 1006 seconds. 
+-- Part 1 compiled (Intel) needs about  1 second. 
+-- Part 2 compiled (Intel) needs about 74 seconds. 
 --
 -- If you like to plot the cave . . .
 -- The rocks/sands range of the cave in part 2 is (323,162)
@@ -120,12 +120,13 @@ dropSands caveWith rocks = (length sands, sands)
             | isDone                = newSands
             | otherwise             = dropSands' caveWith ppl depth newSands rocks 
                 where 
-                    pp = getFreePreviousPoint source sands
-                    ((ppl,newSands),isDone) = dropSandUnit caveWith source pp depth sands rocks                    
-                    getFreePreviousPoint [] _ = sandSource
+                    nsl = getFreePreviousPoint source sands
+                    pp  = head nsl
+                    ((ppl,newSands),isDone) = dropSandUnit caveWith nsl pp depth sands rocks
+                    getFreePreviousPoint [] _ = [sandSource]
                     getFreePreviousPoint (pp:ppl) sands 
                         | elem pp sands = getFreePreviousPoint ppl sands
-                        | otherwise     = pp
+                        | otherwise     = (pp:ppl)
 
 -- Show the 2D map of the cave
 showCave :: Rocks -> Sands -> IO ()
@@ -155,8 +156,8 @@ main = do   putStrLn "Advent of Code 2022 - day 14  (Haskell) time consuming"
             let (units2,sands2) = dropSands Floor rocks          
             putStr "The resting number units of sand with the cave abyss is:   "
             putStrLn "901 *"
---            print units1
+            print units1
             putStr "The resting number units of sand with the cave floor is: "
             putStrLn "24589 *"
---            print units2
+            print units2
             putStrLn "\n0K.\n"
