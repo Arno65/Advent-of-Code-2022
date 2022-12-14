@@ -156,8 +156,8 @@ main = do   putStrLn "Advent of Code 2022 - day 14  (Haskell) time consuming"
             let (units2,sands2) = dropSands Floor rocks          
             putStr "The resting number units of sand with the cave abyss is:   "
             putStrLn "901 *"
-            print units1
+--            print units1
             putStr "The resting number units of sand with the cave floor is: "
             putStrLn "24589 *"
-            print units2
+--            print units2
             putStrLn "\n0K.\n"
