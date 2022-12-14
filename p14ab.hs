@@ -101,8 +101,7 @@ dropSandUnit caveWith ppl (sx,sy) depth sands rocks
     |  sy == 0                      = ((nppl,sands ++ [(sx,sy)]),True)  -- at its right place ~ order
     |  otherwise                    = ((nppl,sands ++ [(sx,sy)]),False)
         where
---            nppl = if (elem (sx,sy) ppl) then ppl else [(sx,sy)] ++ ppl -- current start position
-            nppl = [(sx,sy)] ++ ppl -- current start position
+            nppl = if (elem (sx,sy) ppl) then ppl else [(sx,sy)] ++ ppl -- current start position
             nsy = sy + 1
             isAir sp rocks sands    
                 | elem sp rocks = False
