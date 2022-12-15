@@ -43,3 +43,9 @@ Day 13 has solutions in Haskell.\
 
 Day 14 has solutions in Haskell.
 
+Day 15 has only the solution for part 1 in Haskell.\
+(This code is slow. A faster version for both parts will probably be posted during the holidays.)
+
+
+
+
