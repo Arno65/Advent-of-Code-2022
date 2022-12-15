@@ -16,7 +16,7 @@
 -- Better run compiled version ;-)
 -- Un-comment the 'print unit' lines in the main function (from line 150+)
 --
--- module AoC2022d10ab where
+-- module AoC2022d14ab where
   
 import Data.Char
 
