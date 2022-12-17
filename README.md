@@ -31,8 +31,6 @@ The alternative version can be found in directory
 
 Day 8, 9 and 10 have solutions in Haskell.
 
-(I have solved Day 11 but want to clean up the code. That code will probably be posted during the holidays.)
-
 Day 12 has solutions in Haskell.\
 Part 1 is working 0K but my code only works for a 'max one step down' situation. 
 My AoC puzzle input only had one step down situations and produced the correct number of steps.\
@@ -49,3 +47,4 @@ Day 15 has only the solution for part 1 in Haskell.\
 Day 17 has solutions in Haskell.
 
 
+(I have solved Day 11 and day 16 but want to clean up the ugly code. That code will probably be posted during the holidays.)
