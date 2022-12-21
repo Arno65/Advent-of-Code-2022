@@ -46,5 +46,4 @@ Day 15 has only the solution for part 1 in Haskell.\
 
 Day 17 has solutions in Haskell.
 
-
-(I have solved Day 11 and day 16 but want to clean up the ugly code. That code will probably be posted during the holidays.)
+Day 21 has solutions in Haskell.
