@@ -5,10 +5,13 @@
 -- The number of empty ground tiles is:                 4254
 -- The number of the first round where no Elf moves is:  992
 --
+-- The code is slow, it take > 20 minutes to run part2
+-- (Print hard coded values in output)
+--
 -- (cl) by Arno Jacobs, 2022-12-23
 
--- module AoC2022d23ab where
-
+-- 
+module AoC2022d23ab where
 
 type Position = (Int,Int)
 type Elves = [Position]
@@ -125,10 +128,11 @@ main :: IO ()
 main = do   putStrLn "Advent of Code 2022 - day 23  (Haskell)"
             elves <- parse <$> lines <$> readFile filename
             putStr "The number of empty ground tiles is:                 "
-            print $ empty $ workPart1 directions elves 10
+            -- print $ empty $ workPart1 directions elves 10
+            putStrLn "4254 *"
             putStr "The number of the first round where no Elf moves is:  "
             -- print $ workPart2 directions elves 0 -- slow
-            putStr "992 *"
+            putStrLn "992 *"
             putStrLn "0K.\n"
 
             -- showElves elves      -- for example
