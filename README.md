@@ -45,3 +45,6 @@ Day 15 has only the solution for part 1 in Haskell.\
 (This code is slow. A faster version for both parts will probably be posted during the holidays.)
 
 Day 17, 21, 23 and 24 have solutions in Haskell.
+
+Day 25 has a solution in Haskell.
+
