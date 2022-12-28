@@ -29,7 +29,8 @@ Both version work 0K.\
 The alternative version can be found in directory
 [SolvedWithTree](https://github.com/Arno65/Advent-of-Code-2022/tree/main/SolvedWithTree)
 
-Day 8, 9 and 10 have solutions in Haskell.
+Day 8, 9, 10 and 11 have solutions in Haskell.\
+For day 11 I cleaned up the code afterwards.
 
 Day 12 has solutions in Haskell.\
 Part 1 is working 0K but my code only works for a 'max one step down' situation. 
@@ -42,7 +43,7 @@ Day 13 has solutions in Haskell.\
 Day 14 has solutions in Haskell.
 
 Day 15 has only the solution for part 1 in Haskell.\
-(This code is slow. A faster version for both parts will probably be posted during the holidays.)
+(This code is slow. A faster version for both parts will probably be posted afterwards.)
 
 Day 17, 21, 23 and 24 have solutions in Haskell.
 
