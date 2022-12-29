@@ -45,7 +45,11 @@ Day 14 has solutions in Haskell.
 Day 15 has only the solution for part 1 in Haskell.\
 (This code is slow. A faster version for both parts will probably be posted afterwards.)
 
-Day 17, 20, 21, 23 and 24 have solutions in Haskell.
+Day 17 has solutions in Haskell.
+
+Day 18 has only the solution for part 1 in Haskell.
+
+Day 20, 21, 23 and 24 have solutions in Haskell.
 
 Day 25 has a solution in Haskell.
 
