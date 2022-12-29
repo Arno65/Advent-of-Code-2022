@@ -43,7 +43,7 @@ surfaceArea cubes = surfaceArea' (6 * length cubes) cubes cubes
 
 
 main :: IO ()
-main = do   putStrLn "Advent of Code 2022 - day 18  (Haskell) First part only"
+main = do   putStrLn "Advent of Code 2022 - day 18  (Haskell)  First part only"
             cubes <- parse <$> lines <$> readFile filename
             putStr "The surface area of the scanned lava droplet is: "
             print $ surfaceArea cubes   

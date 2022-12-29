@@ -66,17 +66,15 @@ noBeaconsInRow row sbpl =  sum [ 1 |    x <- [minX..maxX],
         minX = minRX + minimum [ sx - md | ((sx,_),md) <- smdl ]
         maxX = maxRX + maximum [ sx + md | ((sx,_),md) <- smdl ]
 
--- For both part 1 & 2
 beaconsOnPosition :: Position -> [(Position,Int)] -> Bool
-beaconsOnPosition _ [] = True
-beaconsOnPosition txy ((sxy,md):rsmdl)
-    = (tmd > md) && beaconsOnPosition txy rsmdl
-        where
-            tmd = manhattan txy sxy
+beaconsOnPosition _ []                  = True
+beaconsOnPosition txy ((sxy,md):rsmdl)  = 
+    (tmd > md) && beaconsOnPosition txy rsmdl
+        where tmd = manhattan txy sxy
 
 
 main :: IO ()
-main = do   putStrLn "Advent of Code 2022 - day 15 - part 1 only (Haskell)"
+main = do   putStrLn "Advent of Code 2022 - day 15  (Haskell)  First part only"
             day15 <- map parse <$> lines <$> readFile filename
             putStr "Quested number of positions: "
             print $ noBeaconsInRow scanLine day15
