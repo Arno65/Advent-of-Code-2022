@@ -16,7 +16,7 @@ Day 2 has solutions in Haskell, Common Lisp, Clojure and Python.
 
 Day 3, 4 and 5 have solutions in Haskell.
 
-Day 6 has solutions in Haskell and Python.
+Day 6 has solutions in Haskell, Clojure and Python.
 
 Day 7 has two versions with solutions in Haskell\
 It took me more than a day to solve the task for day 7.\
