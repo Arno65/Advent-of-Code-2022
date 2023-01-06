@@ -54,7 +54,7 @@ Day 24 was my favorite AoC challenge of the year.
 Day 25 has a solution in Haskell.
 
 W.i.p.:\
-Part 2 for day 15, 18 and 22 and complete clean and neat solutions for day 16 and 19.
+Part 2 for day 15, 18 and 22 and complete clean and neat solutions for day 16 and 19.\
 I'm also trying solutions in other languages than Haskell.
 
 Happy coding!
