@@ -10,8 +10,13 @@
 ;;;;    (cl) by Arno Jacobs, 2023-01-06
 ;;;;    
 
-;;;; First - read the data-set
+;;; Refactor with the help of (https://clojuredocs.org/clojure.core/-%3E)
+;; `->`  as  the "thread-first" macro and
+;; '->>' as  the "thread-last" macro
+;; to help make code more readable by removing nesting.
 
+;;;; First - read the data-set
+;;
 ;; Importing 'split-lines' from 'string'
 (require ['clojure.string :as 'str])
 
@@ -24,12 +29,15 @@
 (defn parse-int [s]
   (if (= s "")
     marker
-    (Integer. (re-find #"\d+" s))))
+    (-> (re-find #"\d+" s)
+        Integer.)))
 
 ;; Convert text file (with numbers) to a list of strings
 ;; 'map' over list of strings and convert to ints
 (defn get-lines [file]
-  (map #(parse-int %) (str/split-lines (slurp file))))
+  (->> (slurp file)
+       (str/split-lines)
+       (map #(parse-int %))))
 
 (def data-set (get-lines "./data/inputDay01_2022.txt"))
 
@@ -39,7 +47,11 @@
     ()
     (if (= (first lst) marker)
       '()
-      (cons (first lst) (take-sub (rest lst))))))
+      (cons (-> lst
+                first)
+            (-> lst
+                rest
+                take-sub)))))
 
 ;; Drop sub-list of the first elements until 0 
 ;; Return the remaining list after 0
@@ -47,23 +59,35 @@
   (if (= lst ())
     ()
     (if (= (first lst) marker)
-      (rest lst)
-      (drop-sub (rest lst)))))
+      (-> lst
+          rest)
+      (-> lst
+          rest
+          drop-sub))))
 
 ;;; Total the calories per Elf
 (defn calories [lst]
   (if (= lst ())
     ()
-    (cons (reduce + (take-sub lst))
-          (calories (drop-sub lst)))))
+    (cons (->>  lst
+                take-sub
+                (reduce +))
+          (-> lst
+              drop-sub
+              calories))))
+
 
 ;; Pick the 'sc'-number of biggest Ints and return its sum
 ;; For part 1 the maximum value is asked
 ;; For part 2 the sum of the three highest values is asked
 ;;
 (defn sum-top [sc subl]
-  (reduce + (take sc (reverse (sort (into [] subl))))))
-
+  (->> subl
+       (into [])
+       sort
+       reverse
+       (take sc)
+       (reduce +)))
 
 ;;; The 'main' program - - -
 (defn program []
