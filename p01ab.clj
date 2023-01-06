@@ -31,7 +31,6 @@
 (defn get-lines [file]
   (map #(parse-int %) (str/split-lines (slurp file))))
 
-;; (def data-set (to-ints (get-lines "./data/inputDay01_2022.txt")))
 (def data-set (get-lines "./data/inputDay01_2022.txt"))
 
 ;; Take and return sub-list of the first elements until 0 
