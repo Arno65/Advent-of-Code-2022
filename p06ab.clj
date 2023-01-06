@@ -38,9 +38,5 @@
   (println (messageMarker 14 data-set))
   (println "0K.\n"))
 
-;; And just run the 'main'
-;;
-;; Run in terminal via:
-;; $ clojure -M p06ab.clj
-;;
+;; Run in terminal via: clojure -M p06ab.clj
 (program)
