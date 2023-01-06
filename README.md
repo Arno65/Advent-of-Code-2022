@@ -1,7 +1,7 @@
 # Advent of Code 2022
 
 This repository contains most of my solutions for [Advent of Code](https://adventofcode.com) 2022.\
-My main programming language is Haskell. I'll also do some work in Swift, Common Lisp and Python.
+My main programming language is Haskell. I'll also do some work in Swift, Common Lisp, Clojure and Python.
 
 For collecting the stars I will first code the solution in the language that works best for me. 
 Most of the time that will be Haskell.
@@ -29,8 +29,7 @@ Both version work 0K.\
 The alternative version can be found in directory
 [SolvedWithTree](https://github.com/Arno65/Advent-of-Code-2022/tree/main/SolvedWithTree)
 
-Day 8, 9, 10 and 11 have solutions in Haskell.\
-For day 11 I cleaned up the code afterwards.
+Day 8, 9, 10 and 11 have solutions in Haskell.
 
 Day 12 has solutions in Haskell.\
 Part 1 is working 0K but my code only works for a 'max one step down' situation. 
@@ -49,8 +48,13 @@ Day 17 has solutions in Haskell.
 
 Day 18 and 22 have only the solution for part 1 in Haskell.
 
-Day 20, 21, 23 and 24 have solutions in Haskell.
+Day 20, 21, 23 and 24 have solutions in Haskell.\
+Day 24 was my favorite AoC challenge of the year.
 
 Day 25 has a solution in Haskell.
 
-W.i.p.: part 2 for day 15, 18 and 22 and complete clean and neat solutions for day 16 and 19.
+W.i.p.:\
+Part 2 for day 15, 18 and 22 and complete clean and neat solutions for day 16 and 19.
+I'm also trying solutions in other languages than Haskell.
+
+Happy coding!
