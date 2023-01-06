@@ -14,12 +14,12 @@ import Data.List (nub)
 filename :: String
 filename = "data/inputDay06_2022.txt"
 
--- recusuvely testing for unique elements
+-- Recursively testing for unique elements
 messageMarker :: Int -> String -> Int
 messageMarker = marker 0 
     where
         marker m wl ds  | length ds < wl    = (-1)      -- if no start position is found
-                        | nub ps == ps      = m + wl    -- alle 'wl' characters are unique
+                        | nub ps == ps      = m + wl    -- all 'wl' characters are unique
                         | otherwise         = marker (m+1) wl $ tail ds
             where ps = take wl ds
 
