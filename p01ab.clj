@@ -1,4 +1,6 @@
 ;;;;    Advent of Code 2022 - Day 1 task A & B
+;;;;    https://adventofcode.com/2022/day/1
+;;;;
 ;;;;    Solutions in Clojure
 ;;;;    (Ter leering ende vermaeck...)
 ;;;;
