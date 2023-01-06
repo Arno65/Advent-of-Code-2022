@@ -16,7 +16,6 @@
 (require ['clojure.string :as 'str])
 
 ;; Convert text file (with numbers) to a list of strings
-;; 'map' over list of strings and convert to ints
 (defn get-lines [file]
   (->  file
        slurp
