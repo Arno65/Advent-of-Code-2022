@@ -53,20 +53,16 @@
     (rps-s2 one-round)))
 
 ;; Play the game and count ther scores
-(defn work-strategy [strategy score game-data]
-  (if (= game-data ())
-    score
-    (work-strategy  strategy
-                    (+ score (rps strategy (first game-data)))
-                    (rest game-data))))
+(defn work-strategy [strategy game-data]
+  (reduce + (map #(rps strategy %) game-data)))
 
 ;;; The 'main' program - - -
 (defn program []
   (println "Advent of Code 2022 - day 2  (Clojure)")
   (print   "The total score for strategy 1:  ")
-  (println (work-strategy 1 0 data-set))
+  (println (work-strategy 1 data-set))
   (print   "The total score for strategy 2: ")
-  (println (work-strategy 2 0 data-set))
+  (println (work-strategy 2 data-set))
   (println "0K.\n"))
 
 ;; And just run the 'main'

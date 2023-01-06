@@ -69,9 +69,10 @@
 (defn program []
   (println "Advent of Code 2022 - day 1  (Clojure)")
   (print   "The Elf carrying the most Calories,         has  a total of:  ")
-  (println (sum-top 1 (calories data-set)))
+  (def clrs (calories data-set))
+  (println (sum-top 1 clrs))
   (print   "The three Elves carrying the most Calories, have a total of: ")
-  (println (sum-top 3 (calories data-set)))
+  (println (sum-top 3 clrs))
   (println "0K.\n"))
 
 ;; And just run the 'main'
