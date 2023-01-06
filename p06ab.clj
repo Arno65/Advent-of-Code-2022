@@ -18,9 +18,10 @@
 ;;;; Recursively testing for unique elements
 ;;;  Return -1 if NO marker is found
 (defn marker [mpos mln lst]
+  (def subl (take mln lst))
   (if (> mln (count lst))
     -1
-    (if (= (distinct (take mln lst)) (take mln lst))
+    (if (= (distinct subl) subl)
       mpos
       (marker (+ mpos 1) mln (rest lst)))))
 
