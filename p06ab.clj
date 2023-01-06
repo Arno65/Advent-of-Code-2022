@@ -13,7 +13,9 @@
 ;;; First - read the data-set
 ;;; In this quest just one long string with all lowercase letters
 ;;; The string is put into a list of characters
-(def data-set (seq (slurp "./data/inputDay06_2022.txt")))
+(def data-set (-> "./data/inputDay06_2022.txt"
+                  slurp
+                  seq))
 
 ;;;; Recursively testing for unique elements
 ;;;  Return -1 if NO marker is found
@@ -23,7 +25,10 @@
     -1
     (if (= (distinct subl) subl)
       mpos
-      (marker (+ mpos 1) mln (rest lst)))))
+      (->> (rest lst)
+           (marker (-> mpos
+                       inc)
+                   mln)))))
 
 ;; Including start position (counter) 
 (defn messageMarker [mln lst]

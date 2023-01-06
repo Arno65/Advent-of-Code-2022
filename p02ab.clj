@@ -18,7 +18,9 @@
 ;; Convert text file (with numbers) to a list of strings
 ;; 'map' over list of strings and convert to ints
 (defn get-lines [file]
-  (str/split-lines (slurp file)))
+  (->  file
+       slurp
+       (str/split-lines)))
 
 (def data-set (get-lines "./data/inputDay02_2022.txt"))
 
@@ -49,12 +51,16 @@
 ;;; Rock-Paper-Scissors ~ select strategy ~ round by round
 (defn rps [strategy one-round]
   (if (= strategy 1)
-    (rps-s1 one-round)
-    (rps-s2 one-round)))
+    (-> one-round
+        rps-s1)
+    (-> one-round
+        rps-s2)))
 
 ;; Play the game and count ther scores
 (defn work-strategy [strategy game-data]
-  (reduce + (map #(rps strategy %) game-data)))
+  (->> game-data
+       (map #(rps strategy %))
+       (reduce +)))
 
 ;;; The 'main' program - - -
 (defn program []
@@ -65,9 +71,6 @@
   (println (work-strategy 2 data-set))
   (println "0K.\n"))
 
-;; And just run the 'main'
-;;
-;; Run in terminal via:
-;; $ clojure -M p02ab.clj
+;; Run in terminal via: clojure -M p02ab.clj
 ;;
 (program)

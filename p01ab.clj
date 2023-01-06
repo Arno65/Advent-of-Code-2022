@@ -35,7 +35,8 @@
 ;; Convert text file (with numbers) to a list of strings
 ;; 'map' over list of strings and convert to ints
 (defn get-lines [file]
-  (->> (slurp file)
+  (->> file
+       slurp
        (str/split-lines)
        (map #(parse-int %))))
 
@@ -99,9 +100,6 @@
   (println (sum-top 3 clrs))
   (println "0K.\n"))
 
-;; And just run the 'main'
-;;
-;; Run in terminal via:
-;; $ clojure -M p01ab.clj
+;; Run in terminal via: clojure -M p01ab.clj
 ;;
 (program)
